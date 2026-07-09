@@ -6,11 +6,11 @@ const successModal = document.getElementById('success-modal');
 const closeModalButton = document.getElementById('close-modal');
 
 if (counterValues.length > 0) {
-    counterValues.forEach(function (counter) {
+    counterValues.forEach( (counter)=> {
         const targetValue = Number(counter.getAttribute('data-target'));
         let currentValue = 0;
 
-        const updateCounter = function () {
+        const updateCounter = () => {
             if (currentValue >= targetValue) {
                 counter.textContent = targetValue.toLocaleString() + '+';
                 return;
@@ -26,13 +26,13 @@ if (counterValues.length > 0) {
 }
 
 if (faqItems.length > 0) {
-    faqItems.forEach(function (faqItem) {
+    faqItems.forEach((faqItem) => {
         const questionButton = faqItem.querySelector('.faq-question');
 
-        questionButton.addEventListener('click', function () {
+        questionButton.addEventListener('click', () => {
             const isActive = faqItem.classList.contains('active');
 
-            faqItems.forEach(function (item) {
+            faqItems.forEach((item) => {
                 item.classList.remove('active');
                 item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
             });
@@ -46,7 +46,7 @@ if (faqItems.length > 0) {
 }
 
 if (quoteForm && formMessage) {
-    quoteForm.addEventListener('submit', function (event) {
+    quoteForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
         const formData = new FormData(quoteForm);
@@ -72,14 +72,14 @@ if (quoteForm && formMessage) {
 }
 
 if (closeModalButton && successModal) {
-    closeModalButton.addEventListener('click', function () {
+    closeModalButton.addEventListener('click', () => {
         successModal.classList.remove('active');
         successModal.setAttribute('aria-hidden', 'true');
     });
 }
 
 if (successModal) {
-    successModal.addEventListener('click', function (event) {
+    successModal.addEventListener('click', (event) => {
         if (event.target === successModal) {
             successModal.classList.remove('active');
             successModal.setAttribute('aria-hidden', 'true');
