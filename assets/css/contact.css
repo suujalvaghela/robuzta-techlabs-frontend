@@ -1,0 +1,150 @@
+/* =========================
+CONTACT SECTION
+========================= */
+
+.contact-section {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-info,
+.contact-panel {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.location-card,
+.quote-card,
+.faq-card {
+    padding: 1.35rem;
+    border: 1px solid var(--border);
+    border-radius: 1.2rem;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.location-card h3,
+.quote-card h3,
+.faq-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+}
+
+.location-card p,
+.location-card a,
+.location-card span,
+.quote-card p,
+.faq-answer p {
+    color: var(--text-muted);
+}
+
+.location-card a {
+    display: inline-block;
+    margin-top: 0.4rem;
+    color: var(--accent);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+label {
+    display: grid;
+    gap: 0.45rem;
+    margin-bottom: 0.95rem;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: rgba(102, 225, 194, 0.75);
+    box-shadow: 0 0 0 3px rgba(102, 225, 194, 0.14);
+}
+
+.form-message {
+    min-height: 1.5rem;
+    margin: 0.75rem 0 0;
+    color: var(--accent);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-main);
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 120px;
+    margin-top: 0.5rem;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.74);
+    z-index: 2000;
+}
+
+.modal-backdrop.active {
+    display: flex;
+}
+
+.modal-card {
+    width: min(100%, 420px);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1.2rem;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

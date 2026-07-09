@@ -1,0 +1,89 @@
+/* =========================
+ABOUT SECTION
+========================= */
+
+.about-section {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-points {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.about-point {
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.about-point h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.02rem;
+}
+
+.about-point p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.about-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.about-card {
+    width: min(100%, 430px);
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    box-shadow: var(--shadow);
+}
+
+.timeline-card,
+.founder-card {
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(5, 10, 20, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.timeline-card ul {
+    padding-left: 1rem;
+    margin: 0.6rem 0 0;
+    color: var(--text-muted);
+}
+
+.timeline-card li+li {
+    margin-top: 0.45rem;
+}
+
+.founder-card {
+    margin-top: 0.9rem;
+}
+
+.founder-card h3 {
+    margin: 0 0 0.25rem;
+}
+
+.founder-card p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.founder-card blockquote {
+    margin: 0.8rem 0 0;
+    color: var(--accent);
+    font-weight: 600;
+}

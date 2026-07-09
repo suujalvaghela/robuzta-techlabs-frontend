@@ -1,0 +1,52 @@
+/* =========================
+TESTIMONIALS SECTION
+========================= */
+
+.testimonial-section {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.testimonial-slider {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-button {
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.testimonial-track {
+    position: relative;
+    min-height: 220px;
+}
+
+.testimonial-card {
+    display: none;
+    padding: 1.6rem;
+    border: 1px solid var(--border);
+    border-radius: 1.3rem;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.testimonial-card.active {
+    display: block;
+}
+
+.testimonial-card p {
+    margin: 0 0 1rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.testimonial-card strong {
+    color: var(--text-main);
+}
